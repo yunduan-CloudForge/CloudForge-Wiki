@@ -1,0 +1,24 @@
+{
+  "name": "markdown-wiki-system",
+  "version": "1.0.0",
+  "description": "基于Markdown的静态Wiki系统",
+  "main": "index.js",
+  "scripts": {
+    "build": "node tools/md2html.js",
+    "start": "npx http-server -p 8080"
+  },
+  "keywords": [
+    "wiki",
+    "markdown",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "highlight.js": "^11.7.0",
+    "marked": "^4.2.12"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

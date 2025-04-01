@@ -1,0 +1,35 @@
+{
+  "入门指南": {
+    "type": "folder",
+    "title": "入门指南",
+    "快速开始": {
+      "type": "file",
+      "title": "快速开始",
+      "path": "getting-started/quick-start"
+    },
+    "基本用法": {
+      "type": "file",
+      "title": "基本用法",
+      "path": "getting-started/basic-usage"
+    }
+  },
+  "功能介绍": {
+    "type": "folder",
+    "title": "功能介绍",
+    "Markdown语法": {
+      "type": "file",
+      "title": "Markdown语法",
+      "path": "features/markdown-syntax"
+    },
+    "搜索功能": {
+      "type": "file",
+      "title": "搜索功能",
+      "path": "features/search"
+    }
+  },
+  "关于": {
+    "type": "file",
+    "title": "关于本Wiki",
+    "path": "about"
+  }
+}

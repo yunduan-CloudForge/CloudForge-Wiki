@@ -1,0 +1,8 @@
+{
+  "title": "CloudForge-Wiki",
+  "description": "团队自编写静态Wiki系统",
+  "footer": "&copy; 2024-2025 云锻Wiki系统 | 基于Markdown的静态Wiki",
+  "theme": "light",
+  "defaultPage": "",
+  "repository": ""
+}

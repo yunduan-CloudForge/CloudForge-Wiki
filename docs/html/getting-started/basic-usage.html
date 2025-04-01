@@ -1,0 +1,100 @@
+<h1 id="基本用法">基本用法</h1>
+<p>本页面将介绍Wiki系统的基本使用方法，帮助您充分利用系统的各项功能。</p>
+<h2 id="编写文档">编写文档</h2>
+<h3 id="创建新文档">创建新文档</h3>
+<ol>
+<li>在 <code>docs</code> 目录中创建新的Markdown文件（<code>.md</code>扩展名）</li>
+<li>编辑 <code>docs/index.json</code> 文件，将新文档添加到目录结构中</li>
+<li>使用 <code>npm run build</code>命令构建Wiki的静态文件</li>
+<li>使用 <code>npm start</code> 命令启动Wiki的开发服务器预览文档</li>
+</ol>
+<h3 id="文档格式">文档格式</h3>
+<p>所有文档都使用Markdown格式编写。Markdown是一种轻量级标记语言，易于学习和使用。详细语法请参考<a href="../features/markdown-syntax">Markdown语法</a>页面。</p>
+<h3 id="文档链接">文档链接</h3>
+<p>在文档中链接到其他文档时，可以使用相对路径：</p>
+<pre><code class="language-markdown">[<span class="hljs-string">链接文本</span>](<span class="hljs-link">相对路径</span>)
+</code></pre>
+<p>例如：</p>
+<ul>
+<li>链接到同级目录：<code>[基本用法](basic-usage)</code></li>
+<li>链接到上级目录：<code>[Markdown语法](../features/markdown-syntax)</code></li>
+<li>链接到子目录：<code>[子文档](subdirectory/document)</code></li>
+</ul>
+<h2 id="目录结构">目录结构</h2>
+<h3 id="indexjson-文件格式">index.json 文件格式</h3>
+<p><code>docs/index.json</code> 文件定义了Wiki的目录结构，格式如下：</p>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;分类1&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;folder&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;显示的分类名称&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;文档1&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;file&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;显示的文档名称&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;category/document1&quot;</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;文档2&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;file&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;单独文档&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;document2&quot;</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>说明：</p>
+<ul>
+<li><code>type</code>: 可以是 <code>folder</code>（文件夹）或 <code>file</code>（文件）</li>
+<li><code>title</code>: 在导航菜单中显示的名称</li>
+<li><code>path</code>: 文档的路径（不包含 <code>.md</code> 扩展名）</li>
+</ul>
+<h2 id="配置系统">配置系统</h2>
+<h3 id="configjson-文件">config.json 文件</h3>
+<p><code>config.json</code> 文件包含Wiki系统的全局配置：</p>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Wiki标题&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Wiki描述&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;footer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;页脚内容&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;light&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;defaultPage&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;默认显示的页面路径&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;repository&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;GitHub仓库URL&quot;</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h2 id="使用技巧">使用技巧</h2>
+<h3 id="图片和资源">图片和资源</h3>
+<p>将图片和其他资源文件放在 <code>docs/assets</code> 目录中，然后在Markdown文件中引用：</p>
+<pre><code class="language-markdown">![<span class="hljs-string">图片描述</span>](<span class="hljs-link">../assets/image.png</span>)
+</code></pre>
+<h3 id="代码高亮">代码高亮</h3>
+<p>使用三个反引号和语言名称来启用代码高亮：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello, Wiki!&quot;</span>);
+}
+</code></pre>
+<h3 id="表格">表格</h3>
+<p>Markdown支持创建表格：</p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th>列2</th>
+<th>列3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据1</td>
+<td>数据2</td>
+<td>数据3</td>
+</tr>
+<tr>
+<td>数据4</td>
+<td>数据5</td>
+<td>数据6</td>
+</tr>
+</tbody></table>
+<h2 id="搜索功能">搜索功能</h2>
+<p>使用页面顶部的搜索框可以快速查找内容。搜索功能会检索所有文档的标题和内容，并按相关性排序显示结果。</p>
+<h2 id="下一步">下一步</h2>
+<ul>
+<li>学习<a href="../features/markdown-syntax">Markdown语法</a>编写更丰富的文档</li>
+<li>了解如何使用<a href="../features/search">搜索功能</a>快速找到内容</li>
+<li>查看<a href="../about">关于页面</a>了解更多信息</li>
+</ul>

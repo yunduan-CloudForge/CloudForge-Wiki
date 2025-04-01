@@ -1,0 +1,173 @@
+<h1 id="markdown语法">Markdown语法</h1>
+<p>Markdown是一种轻量级标记语言，创建于2004年，目前被广泛使用于文档编写、笔记记录和网页内容创作。本页面将介绍Markdown的基本语法，帮助您编写格式丰富的文档。</p>
+<h2 id="基本语法">基本语法</h2>
+<h3 id="标题">标题</h3>
+<p>使用 <code>#</code> 符号创建标题，<code>#</code> 的数量表示标题级别：</p>
+<pre><code class="language-markdown"><span class="hljs-section"># 一级标题</span>
+<span class="hljs-section">## 二级标题</span>
+<span class="hljs-section">### 三级标题</span>
+<span class="hljs-section">#### 四级标题</span>
+<span class="hljs-section">##### 五级标题</span>
+<span class="hljs-section">###### 六级标题</span>
+</code></pre>
+<h3 id="段落和换行">段落和换行</h3>
+<p>段落之间使用一个或多个空行分隔。在行末添加两个或更多空格然后回车可以创建换行。</p>
+<h3 id="强调">强调</h3>
+<pre><code class="language-markdown"><span class="hljs-emphasis">*斜体文本*</span> 或 <span class="hljs-emphasis">_斜体文本_</span>
+<span class="hljs-strong">**粗体文本**</span> 或 <span class="hljs-strong">__粗体文本__</span>
+<span class="hljs-strong">**<span class="hljs-emphasis">*粗斜体文本*</span>**</span> 或 <span class="hljs-strong">__<span class="hljs-emphasis">_粗斜体文本_</span>__</span>
+</code></pre>
+<p>效果：
+<em>斜体文本</em> 或 <em>斜体文本</em>
+<strong>粗体文本</strong> 或 <strong>粗体文本</strong>
+<em><strong>粗斜体文本</strong></em> 或 <em><strong>粗斜体文本</strong></em></p>
+<h3 id="列表">列表</h3>
+<h4 id="无序列表">无序列表</h4>
+<pre><code class="language-markdown"><span class="hljs-bullet">-</span> 项目1
+<span class="hljs-bullet">-</span> 项目2
+<span class="hljs-bullet">  -</span> 子项目A
+<span class="hljs-bullet">  -</span> 子项目B
+<span class="hljs-bullet">-</span> 项目3
+</code></pre>
+<p>效果：</p>
+<ul>
+<li>项目1</li>
+<li>项目2<ul>
+<li>子项目A</li>
+<li>子项目B</li>
+</ul>
+</li>
+<li>项目3</li>
+</ul>
+<h4 id="有序列表">有序列表</h4>
+<pre><code class="language-markdown"><span class="hljs-bullet">1.</span> 第一项
+<span class="hljs-bullet">2.</span> 第二项
+<span class="hljs-bullet">3.</span> 第三项
+</code></pre>
+<p>效果：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h3 id="链接">链接</h3>
+<pre><code class="language-markdown">[<span class="hljs-string">链接文本</span>](<span class="hljs-link">URL &quot;可选标题&quot;</span>)
+</code></pre>
+<p>例如：<a href="https://daringfireball.net/projects/markdown/" title="Markdown官方网站">Markdown官方文档</a></p>
+<h3 id="图片">图片</h3>
+<pre><code class="language-markdown">![<span class="hljs-string">替代文本</span>](<span class="hljs-link">图片URL &quot;可选标题&quot;</span>)
+</code></pre>
+<h3 id="引用">引用</h3>
+<pre><code class="language-markdown"><span class="hljs-quote">&gt; 这是一段引用文本。</span>
+<span class="hljs-quote">&gt; 
+&gt; 这是引用的第二段。</span>
+</code></pre>
+<p>效果：</p>
+<blockquote>
+<p>这是一段引用文本。</p>
+<p>这是引用的第二段。</p>
+</blockquote>
+<h3 id="水平线">水平线</h3>
+<p>使用三个或更多的星号、减号或下划线创建水平线：</p>
+<pre><code class="language-markdown"><span class="hljs-section"><span class="hljs-strong">***
+---
+__<span class="hljs-emphasis">_</span></span></span>
+</code></pre>
+<p>效果：</p>
+<hr>
+<h2 id="高级语法">高级语法</h2>
+<h3 id="代码">代码</h3>
+<h4 id="行内代码">行内代码</h4>
+<pre><code class="language-markdown"><span class="hljs-code">`行内代码`</span>
+</code></pre>
+<p>效果：<code>行内代码</code></p>
+<h4 id="代码块">代码块</h4>
+<p>使用三个反引号（```）创建代码块，可以指定语言以启用语法高亮：</p>
+<pre><code class="language-markdown"><span class="hljs-code">```javascript
+function example() {
+  console.log(&quot;Hello, Wiki!&quot;);
+}
+```</span>
+</code></pre>
+<p>效果：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">example</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Hello, Wiki!&quot;</span>);
+}
+</code></pre>
+<h3 id="表格">表格</h3>
+<pre><code class="language-markdown">| 列1 | 列2 | 列3 |
+|-----|:----:|-----:|
+| 左对齐 | 居中 | 右对齐 |
+| 数据 | 数据 | 数据 |
+</code></pre>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th align="center">列2</th>
+<th align="right">列3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>左对齐</td>
+<td align="center">居中</td>
+<td align="right">右对齐</td>
+</tr>
+<tr>
+<td>数据</td>
+<td align="center">数据</td>
+<td align="right">数据</td>
+</tr>
+</tbody></table>
+<h3 id="任务列表">任务列表</h3>
+<pre><code class="language-markdown"><span class="hljs-bullet">-</span> [x] 已完成任务
+<span class="hljs-bullet">-</span> [ ] 未完成任务
+<span class="hljs-bullet">-</span> [ ] 另一个未完成任务
+</code></pre>
+<p>效果：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成任务</li>
+<li><input disabled="" type="checkbox"> 未完成任务</li>
+<li><input disabled="" type="checkbox"> 另一个未完成任务</li>
+</ul>
+<h3 id="脚注">脚注</h3>
+<pre><code class="language-markdown">这里有一个脚注引用[^1]。
+
+[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">这是脚注内容。</span>
+</code></pre>
+<h3 id="删除线">删除线</h3>
+<pre><code class="language-markdown">~~删除的文本~~
+</code></pre>
+<p>效果：<del>删除的文本</del></p>
+<h3 id="自动链接">自动链接</h3>
+<pre><code class="language-markdown"><span class="language-xml">&lt;https://example.com&gt;</span>
+<span class="language-xml">&lt;email@example.com&gt;</span>
+</code></pre>
+<p>效果：<a href="https://example.com">https://example.com</a>, <a href="mailto:&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;">&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h2 id="在本wiki中使用markdown">在本Wiki中使用Markdown</h2>
+<p>本Wiki系统支持标准Markdown语法以及一些扩展功能：</p>
+<ol>
+<li><strong>代码高亮</strong>：支持多种编程语言的语法高亮</li>
+<li><strong>表格</strong>：完整支持Markdown表格语法</li>
+<li><strong>任务列表</strong>：可以创建交互式任务列表</li>
+<li><strong>数学公式</strong>：使用LaTeX语法编写数学公式（需要额外配置）</li>
+</ol>
+<h2 id="编辑技巧">编辑技巧</h2>
+<ol>
+<li><strong>保持简洁</strong>：Markdown的设计理念是简洁易读，尽量避免过度格式化</li>
+<li><strong>预览</strong>：编辑时定期预览效果，确保格式正确</li>
+<li><strong>组织结构</strong>：使用标题层次组织文档结构，便于阅读和导航</li>
+<li><strong>一致性</strong>：在整个Wiki中保持一致的格式和风格</li>
+</ol>
+<h2 id="参考资源">参考资源</h2>
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/">Markdown官方文档</a></li>
+<li><a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a></li>
+<li><a href="https://www.markdownguide.org/">Markdown指南</a></li>
+</ul>
+<h2 id="下一步">下一步</h2>
+<ul>
+<li>了解如何使用<a href="search">搜索功能</a>快速找到内容</li>
+<li>返回<a href="../getting-started/basic-usage">基本用法</a>页面</li>
+</ul>

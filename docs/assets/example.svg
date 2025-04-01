@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#f1f1f1" stroke="#333" stroke-width="2"/>
+  <text x="100" y="50" font-family="Arial" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#333">示例图片</text>
+  <text x="100" y="75" font-family="Arial" font-size="12" text-anchor="middle" dominant-baseline="middle" fill="#666">Wiki系统</text>
+</svg>
