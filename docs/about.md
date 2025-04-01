@@ -55,14 +55,14 @@
 
 ## 使用许可
 
-本项目采用 MIT 许可证 - 详细信息请查看 [LICENSE](https://github.com/yourusername/wiki-system/blob/main/LICENSE) 文件。
+本项目采用 Apache-2.0 license 许可证 - 详细信息请查看 [LICENSE](https://github.com/yourusername/wiki-system/blob/main/LICENSE) 文件。
 
 ## 联系方式
 
 如有任何问题或建议，请通过以下方式联系我们：
 
-- **GitHub Issues**：[https://github.com/yourusername/wiki-system/issues](https://github.com/yourusername/wiki-system/issues)
-- **Email**：your.email@example.com
+- **GitHub Issues**：[https://github.com/yunduan-CloudForge/CloudForge-Wiki/issues](https://github.com/yunduan-CloudForge/CloudForge-Wiki/issues)
+- **Email**：CloudForge-official@yunforge.xyz
 
 ## 致谢
 

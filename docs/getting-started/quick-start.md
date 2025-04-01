@@ -11,8 +11,8 @@
 ### 1. 克隆或下载仓库
 
 ```bash
-git clone https://github.com/yourusername/wiki-system.git
-cd wiki-system
+git clone https://github.com/yunduan-CloudForge/CloudForge-Wiki.git
+cd CloudForge-Wiki-main
 ```
 
 ### 2. 修改配置
