@@ -17,9 +17,7 @@
 ### 本地运行
 
 1. 克隆或下载本仓库
-2. 使用任何静态文件服务器运行项目
-   - 例如使用Python：`python -m http.server`
-   - 或使用Node.js：`npx serve`
+2. 使用npm start启动本地服务器
 3. 在浏览器中访问 `http://localhost:8000`（或相应端口）
 
 ### 部署到GitHub Pages
@@ -34,6 +32,7 @@
 1. 在 `docs` 目录中创建Markdown文件（`.md`扩展名）
 2. 编辑 `docs/index.json` 文件，将新文档添加到目录结构中
 3. 自定义 `config.json` 文件中的设置
+4. 使用 `npm run build`命令构建Wiki的静态文件
 
 ## 目录结构
 
@@ -42,6 +41,7 @@
 ├── config.json         # 配置文件
 ├── css/                # 样式文件
 │   └── style.css       # 主样式表
+├── docs/               # 静态文档
 ├── js/                 # JavaScript文件
 │   └── app.js          # 应用逻辑
 └── docs/               # 文档目录
@@ -83,4 +83,4 @@
 
 ## 许可证
 
-本项目采用 MIT 许可证。
+本项目采用 Apache-2.0 license 许可证。
